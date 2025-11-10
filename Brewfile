@@ -16,16 +16,9 @@ brew "git"                  # Version control
 # MODERN CLI TOOLS
 # =============================================================================
 
-brew "fzf"                  # Fuzzy finder
 brew "bat"                  # Better cat with syntax highlighting
-brew "eza"                  # Modern ls replacement
 brew "tree"                 # Directory visualization
-brew "fd"                   # Better find
-brew "ripgrep"              # Better grep
-brew "zoxide"               # Smart directory jumping
 brew "atuin"                # Searchable shell history
-brew "direnv"               # Directory-specific environments
-brew "starship"             # Modern prompt
 brew "zsh-autosuggestions"  # Command suggestions
 
 # =============================================================================

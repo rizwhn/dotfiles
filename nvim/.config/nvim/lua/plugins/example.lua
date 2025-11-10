@@ -146,14 +146,14 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     enabled = false,
-    -- opts = {
-    --   filesystem = {
-    --     filtered_items = {
-    --       visible = true,  -- This is key - shows hidden files
-    --       hide_dotfiles = false,  -- Show dot files like .alpaca_data
-    --       hide_gitignored = false,  -- Show git-ignored files
-    --     },
-    --   },
-    -- },
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = true,  -- This is key - shows hidden files
+          hide_dotfiles = true,  -- Show dot files like .alpaca_data
+          hide_gitignored = true,  -- Show git-ignored files
+        },
+      },
+    },
   },
 }
