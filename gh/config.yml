@@ -1,0 +1,15 @@
+# GitHub CLI Configuration
+# For more details, see: https://cli.github.com/manual/
+
+# Protocol to use when performing git operations (ssh or https)
+git_protocol: https
+
+# Aliases for gh commands
+aliases:
+  co: pr checkout
+
+# When to interactively prompt (enabled or disabled)
+prompt: enabled
+
+# Version identifier
+version: "1"

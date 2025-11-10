@@ -132,7 +132,7 @@ print_header "Setting Up Dotfiles with GNU Stow"
 cd "$DOTFILES_DIR"
 
 # Stow configurations
-configs=("zsh" "git" "nvim" "ghostty" "starship" "lazygit" "atuin")
+configs=("zsh" "git" "nvim" "ghostty" "starship" "lazygit" "atuin" "gh")
 
 for config in "${configs[@]}"; do
   if [ -d "$config" ]; then
