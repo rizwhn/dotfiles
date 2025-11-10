@@ -1,3 +1,4 @@
+
 # Dotfiles Repository Structure
 
 This repository uses GNU Stow to manage dotfiles.
@@ -78,13 +79,14 @@ brew bundle --file=Brewfile
 # Install GNU Stow
 brew install stow
 
-# Stow all configurations
-stow zsh
-stow nvim
-stow ghostty
-stow starship
-stow git
-stow lazygit
+# Stow all configurations (from ~/Code/dotfiles directory)
+cd ~/Code/dotfiles
+stow --no-folding -t ~ zsh
+stow --no-folding -t ~ nvim
+stow --no-folding -t ~ ghostty
+stow --no-folding -t ~ starship
+stow --no-folding -t ~ git
+stow --no-folding -t ~ lazygit
 ```
 
 ### 3. Set Up Secrets
@@ -119,7 +121,7 @@ source ~/.zshrc
 3. Stow the new configuration:
    ```bash
    cd ~/Code/dotfiles
-   stow tool-name
+   stow --no-folding -t ~ tool-name
    ```
 
 ### Updating Dotfiles
@@ -144,7 +146,7 @@ git push
 
 ```bash
 cd ~/Code/dotfiles
-stow -D zsh  # Removes symlinks
+stow -D -t ~ zsh  # Removes symlinks
 ```
 
 ### Reinstalling on a New Machine
@@ -174,7 +176,8 @@ If Stow reports conflicts, it means files already exist in your home directory.
 mv ~/.zshrc ~/.zshrc.backup
 
 # Then stow
-stow zsh
+cd ~/Code/dotfiles
+stow --no-folding -t ~ zsh
 ```
 
 ### Symlinks not working
@@ -198,7 +201,7 @@ Make sure you're editing the files in `~/Code/dotfiles/`, not the symlinks direc
 - `.zshrc.local` is NOT tracked in Git (see `.gitignore`)
 - Always test changes before committing
 - Keep sensitive information in `.zshrc.local` only
-- Use `stow -n` (dry-run) to preview changes before applying
+- Use `stow -nv -t ~ PACKAGE` (dry-run) to preview changes before applying
 
 ## Resources
 

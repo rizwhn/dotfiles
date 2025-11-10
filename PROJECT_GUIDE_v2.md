@@ -1,3 +1,4 @@
+
 # Neovim Development Environment - Project Guide & System Prompt
 
 **Version:** 2.0  
@@ -390,20 +391,22 @@ gofumpt = true               -- Strict formatting
 └── lazygit/.config/lazygit/ → ~/.config/lazygit/
 ```
 
+**Important:** Always use `stow --no-folding -t ~` when running from `~/Code/dotfiles/`
+
 **Common Commands:**
 ```bash
 # Stow a configuration
 cd ~/Code/dotfiles
-stow zsh
+stow --no-folding -t ~ PACKAGE_NAME
 
 # Unstow (remove symlinks)
-stow -D zsh
+stow -D -t ~ PACKAGE_NAME
 
-# Restow (remove and recreate)
-stow -R zsh
+# Restow (refresh symlinks)
+stow -R --no-folding -t ~ PACKAGE_NAME
 
 # Dry run (preview changes)
-stow -n zsh
+stow -nv -t ~ PACKAGE_NAME
 ```
 
 **Making Changes:**
@@ -430,7 +433,7 @@ mv ~/.config/tool/config.toml ~/Code/dotfiles/tool/.config/tool/
 
 # 3. Stow it
 cd ~/Code/dotfiles
-stow tool
+stow --no-folding -t ~ tool
 
 # 4. Commit
 git add tool/
@@ -616,7 +619,7 @@ mv ~/.zshrc ~/.zshrc.backup
 
 # Re-stow
 cd ~/Code/dotfiles
-stow -R zsh
+stow -R --no-folding -t ~ zsh
 ```
 
 **Symlinks not working:**
