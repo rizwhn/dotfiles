@@ -3,6 +3,14 @@ return {
   config = function()
     require("aicommits").setup({
       active_provider = "gemini-api",
+      ui: {
+        use_custom_picker = true,
+        picker = {
+          width = 0.4,             -- Percentage of screen width
+          height = 0.3,            -- Percentage of screen height
+          border = "rounded",      -- Border style
+        },
+      },
       providers = {
         ["gemini-api"] = {
           enabled = true,
