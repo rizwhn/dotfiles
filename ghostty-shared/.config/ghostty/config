@@ -22,7 +22,7 @@ font-style = Regular
 # APPEARANCE
 # =====================================================================
 # Theme: solarized darcula
-background-opacity = 0.9
+background-opacity = 0.8
 background-blur = true
 background-opacity-cells = true
 
