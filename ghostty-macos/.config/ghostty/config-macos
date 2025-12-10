@@ -19,6 +19,14 @@ window-decoration = true
 background-blur-radius = 20
 
 # =====================================================================
+# BACKGROUND
+# =====================================================================
+# background-image = /Users/riz/Pictures/Wallpapers/wallpaperbro-115736.jpeg
+# background-image-fit = stretch
+# background-image-opacity = 0.5
+
+
+# =====================================================================
 # KEYBOARD
 # =====================================================================
 # macOS keyboard behavior - Option key as Alt

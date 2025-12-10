@@ -1,0 +1,8 @@
+# In your dotfiles, create: ripgrep/.ripgreprc
+--glob=!node_modules/
+--glob=!.git/
+--glob=!dist/
+--glob=!build/
+--glob=!.next/
+--glob=!target/
+--glob=!vendor/

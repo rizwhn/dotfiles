@@ -22,7 +22,7 @@ font-style = Regular
 # APPEARANCE
 # =====================================================================
 # Theme: solarized darcula
-background-opacity = 0.8
+background-opacity = 0.5
 background-blur = true
 background-opacity-cells = true
 
@@ -44,6 +44,7 @@ cursor-style-blink = true
 # Cursor styling + SSH session terminfo
 # (all shell integration options must be passed together)
 shell-integration-features = no-cursor,ssh-env
+mouse-hide-while-typing = true
 
 # =====================================================================
 # KEYBOARD BINDINGS
