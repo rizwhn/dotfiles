@@ -22,6 +22,7 @@ brew "bat"                  # Better cat with syntax highlighting
 brew "tree"                 # Directory visualization
 brew "atuin"                # Searchable shell history
 brew "zsh-autosuggestions"  # Command suggestions
+brew "ripgrep"              # Fast grep replacement used by neovim
 
 # =============================================================================
 # GIT TOOLS
@@ -55,7 +56,7 @@ brew "pyenv-virtualenv"     # Pyenv virtualenv plugin
 
 # Uncomment if needed:
 # brew "tmux"                # Terminal multiplexer
-# brew "jq"                  # JSON processor
+brew "jq"                    # JSON processor
 # brew "htop"                # Better top
 # brew "tldr"                # Simplified man pages
 # brew "wget"                # File downloader
