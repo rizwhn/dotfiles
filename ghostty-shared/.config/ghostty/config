@@ -15,6 +15,7 @@ config-file = ?config-linux
 # FONT
 # =====================================================================
 # Font size is set per-platform in config-macos / config-linux
+# font-family = "JetBrainsMono Nerd Font"
 font-family = "CaskaydiaMono Nerd Font"
 font-style = Regular
 

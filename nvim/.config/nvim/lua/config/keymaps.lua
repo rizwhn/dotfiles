@@ -14,6 +14,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- Copy relative file path to clipboard
+vim.keymap.set("n", "<leader>y", function()
+  vim.fn.setreg("+", vim.fn.expand("%"))
+end, { noremap = true, silent = true, desc = "Copy relative file path to clipboard" })
+
 -- Register LSP keymaps when servers attach
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
