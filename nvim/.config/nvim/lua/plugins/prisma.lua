@@ -1,0 +1,30 @@
+return {
+  {
+    "prisma/vim-prisma",
+    ft = { "prisma" },
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      opts.ensure_installed = opts.ensure_installed or {}
+      vim.list_extend(opts.ensure_installed, { "prisma" })
+    end,
+  },
+
+  {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = { "prisma-language-server" },
+    },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        prismals = {},
+      },
+    },
+  },
+}

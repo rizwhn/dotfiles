@@ -36,6 +36,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     local map = function(keys, func, desc)
       vim.keymap.set("n", keys, func, { buffer = buffer, noremap = true, silent = true, desc = desc })
     end
+    local code_action = function(kind)
+      return function()
+        vim.lsp.buf.code_action({
+          context = { only = { kind }, diagnostics = {} },
+          apply = true,
+        })
+      end
+    end
 
     map("gd", vim.lsp.buf.definition, "Go to Definition")
     map("gr", vim.lsp.buf.references, "Find References")
@@ -43,5 +51,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("K", vim.lsp.buf.hover, "Hover")
     map("<leader>rn", vim.lsp.buf.rename, "Rename")
     map("<leader>ca", vim.lsp.buf.code_action, "Code Action")
+
+    if client.name == "vtsls" then
+      map("<leader>co", code_action("source.organizeImports"), "Organize Imports")
+      map("<leader>cI", code_action("source.addMissingImports"), "Add Missing Imports")
+      map("<leader>cu", code_action("source.removeUnusedImports"), "Remove Unused Imports")
+    end
+
+    if client.name == "eslint" then
+      map("<leader>cf", code_action("source.fixAll.eslint"), "Fix All (ESLint)")
+    end
   end,
 })
