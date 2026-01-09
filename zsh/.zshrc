@@ -18,6 +18,10 @@
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     OS_TYPE="macos"
+    # =============================================================================
+    # HOMEBREW INITIALIZATION (Must be early for brew command)
+    # =============================================================================
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     OS_TYPE="linux"
 else
@@ -31,13 +35,6 @@ fi
 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
-
-
-# =============================================================================
-# HOMEBREW INITIALIZATION (Must be early for brew command)
-# =============================================================================
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
 # =============================================================================
@@ -168,15 +165,13 @@ alias gcd="git checkout develop; gpr"
 alias hist="history | grep"
 
 # Enhanced git log with topology ordering and wrapping
-alias gl="git log --graph --topo-order --pretty=format:'%C(yellow)%h %C(red)%ad %C(bold blue)%an%Cgreen%d %Creset%s' --date=short"
-alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
-
+alias gla="git log --graph --topo-order --pretty=format:'%C(yellow)%h %C(red)%ad %C(bold blue)%an%Cgreen%d %Creset%s' --date=short"
+alias gl20="git log -20 --graph --topo-order --pretty=format:'%C(yellow)%h %C(red)%ad %C(bold blue)%an%Cgreen%d %Creset%s' --date=short"
+alias glas="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
+alias gl="gl20"
+alias gls="glas -20"
 # Personal git log (replace 'riz' with your git username)
 alias mygl="gl --author=riz --all"
-
-# Git flow
-alias gffs="git flow feature start"
-alias gffp="git flow feature publish"
 
 # =============================================================================
 # ALIASES - MISCELLANEOUS
