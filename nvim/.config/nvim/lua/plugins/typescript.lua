@@ -5,10 +5,10 @@ return {
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}
       vim.list_extend(opts.ensure_installed, {
-        "vtsls",                        -- TypeScript/JavaScript LSP (better than ts_ls)
-        "tailwindcss-language-server",  -- TailwindCSS support
-        "eslint-lsp",                   -- ESLint support
-        "prettierd",                    -- Code formatter (prettier daemon)
+        "vtsls", -- TypeScript/JavaScript LSP (better than ts_ls)
+        "tailwindcss-language-server", -- TailwindCSS support
+        "eslint-lsp", -- ESLint support
+        "prettierd", -- Code formatter (prettier daemon)
       })
     end,
   },
@@ -35,7 +35,7 @@ return {
               -- Enable smart completions
               suggest = {
                 completeFunctionCalls = true,
-                autoImports = true,              -- Enable auto-import suggestions
+                autoImports = true, -- Enable auto-import suggestions
               },
               -- Inline type hints
               inlayHints = {
@@ -48,7 +48,7 @@ return {
               },
               -- Import settings
               imports = {
-                enabled = true,                  -- Enable import handling
+                enabled = true, -- Enable import handling
               },
             },
             javascript = {
@@ -157,5 +157,4 @@ return {
       },
     },
   },
-
 }
