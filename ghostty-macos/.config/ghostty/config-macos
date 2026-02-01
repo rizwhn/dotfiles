@@ -31,3 +31,6 @@ background-blur-radius = 20
 # =====================================================================
 # macOS keyboard behavior - Option key as Alt
 # This allows Option+Left/Right for word navigation in terminal
+
+# Map Command+Enter to Ctrl+Enter (for Claude Code in tmux)
+keybind = super+enter=ctrl+enter
