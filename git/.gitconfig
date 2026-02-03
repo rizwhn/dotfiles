@@ -2,7 +2,7 @@
 	insteadOf = https://github.com/
 [user]
 	name = riz
-	email = riz@agilefoxhq.com
+	email = me@rizwaniqbal.com
 	signingkey = E9ED53000A6A586A
 [commit]
 	gpgsign = true

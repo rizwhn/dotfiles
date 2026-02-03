@@ -24,7 +24,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        prisma_ls = {},
+        prismals = {},
       },
     },
   },
