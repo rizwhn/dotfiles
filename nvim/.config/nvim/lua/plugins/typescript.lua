@@ -150,6 +150,7 @@ return {
         json = { "prettierd" },
         css = { "prettierd" },
         html = { "prettierd" },
+        markdown = {},
       },
       format_on_save = {
         timeout_ms = 500,
