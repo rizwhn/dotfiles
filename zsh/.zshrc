@@ -343,13 +343,6 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 # GOOGLE CLOUD SDK
 # =============================================================================
 
-if [ -f "$HOME/Code/google-cloud-sdk/path.zsh.inc" ]; then
-    . "$HOME/Code/google-cloud-sdk/path.zsh.inc"
-fi
-
-if [ -f "$HOME/Code/google-cloud-sdk/completion.zsh.inc" ]; then
-    . "$HOME/Code/google-cloud-sdk/completion.zsh.inc"
-fi
 
 # =============================================================================
 # CONSOLIDATED PATH SETUP (Order matters!)
@@ -361,7 +354,6 @@ USER_BIN_PATHS=(
     "$HOME/.nvm/versions/node/v22.13.1/bin" # NVM should come early if you want its node/npm
     "$HOME/Library/pnpm"                    # pnpm home
     "$HOME/.local/bin"                      # General user binaries
-    "$HOME/Code/google-cloud-sdk/bin"       # Google Cloud SDK
     "/opt/homebrew/opt/postgresql@16/bin"   # PostgreSQL 16
     "/usr/local/go/bin"                     # GoLang
     "/usr/local/MacGPG2/bin"                # MacGPG2
