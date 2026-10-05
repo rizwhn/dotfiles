@@ -8,3 +8,5 @@
 	gpgsign = true
 [init]
 	defaultBranch = master
+[includeIf "gitdir:/Users/riz/Code/basen/"]
+	path = /Users/riz/.config/git/basen.gitconfig
